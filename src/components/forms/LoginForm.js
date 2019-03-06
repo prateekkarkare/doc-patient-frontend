@@ -27,17 +27,20 @@ export class LoginForm extends Component {
     const { data } = this.state;
     return (
       <div className={classes.root}>
-        <form onSubmit={this.onSubmit}>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@example.com"
+        <form
+          className={classes.container}
+          noValidate
+          autoComplete="off"
+          submit={this.onSubmit}
+        >
+          <TextField
+            id="standard-name"
+            label="Name"
+            className={classes.textField}
             value={this.state.data.email}
             onChange={this.onChange}
+            margin="normal"
           />
-          <label htmlFor="password">Email</label>
           <TextField
             id="standard-password-input"
             label="Password"
@@ -55,8 +58,7 @@ export class LoginForm extends Component {
 }
 
 LoginForm.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired
 };
 
 export default LoginForm;

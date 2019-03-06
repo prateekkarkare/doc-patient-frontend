@@ -8,12 +8,14 @@ class PatientList extends Component {
     patient: [
       {
         fields: {
+          patientID: "1",
           title: "Patient 1",
           description: "Description 1"
         }
       },
       {
         fields: {
+          patientID: "2",
           title: "Patient 2",
           description: "Description 2"
         }
@@ -39,19 +41,20 @@ class PatientList extends Component {
   render() {
     return (
       <div>
-        <div>
-          {/*<TextField style={{padding: 24}}
-            id="searchInput"
-            placeholder="Search for Patients"
-            margin="normal"/>*/}
-          <Grid container spacing={24} style={{ padding: 24 }}>
-            {this.state.patient.map(currentPatient => (
-              <Grid item xs={12} sm={6} lg={4} xl={3}>
-                <Patient patient={currentPatient} />
-              </Grid>
-            ))}
-          </Grid>
-        </div>
+        <Grid container spacing={24} style={{ padding: 24 }}>
+          {this.state.patient.map(currentPatient => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              lg={4}
+              xl={3}
+              key={currentPatient.fields.patientID}
+            >
+              <Patient patient={currentPatient} />
+            </Grid>
+          ))}
+        </Grid>
       </div>
     );
   }

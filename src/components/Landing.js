@@ -9,13 +9,14 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import Header from "./Header/Header.js";
 import Parallax from "./Parallax.js";
+import Footer from "./Footer/Footer.js";
 import GridContainer from "./Grid/GridContainer.js";
 import GridItem from "./Grid/GridItem.js";
 import Button from "./CustomButtons/Button.js";
 import landingPageStyle from "../assets/jss/views/landingPageStyle.js";
 
 // Sections for this page
-//import ProductSection from "./Sections/ProductSection.jsx";
+import ProductSection from "./Sections/Products.js";
 //import TeamSection from "./Sections/TeamSection.jsx";
 //import WorkSection from "./Sections/WorkSection.jsx";
 
@@ -64,6 +65,11 @@ class LandingPage extends React.Component {
             </GridContainer>
           </div>
         </Parallax>
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <div className={classes.container} />
+          <ProductSection />
+        </div>
+        <Footer />
       </div>
     );
   }

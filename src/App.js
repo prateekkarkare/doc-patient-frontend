@@ -8,7 +8,7 @@ const App = () => (
   <div className="main_container">
     <Route path="/docdash" exact component={DocDashBoardPage} />
     <Route path="/login" exact component={LoginPage} />
-    <Route path="/landing" exact component={LandingPage} />
+    <Route path="/" exact component={LandingPage} />
   </div>
 );
 

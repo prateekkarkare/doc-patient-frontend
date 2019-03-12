@@ -3,9 +3,9 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
+import LiveHelp from "@material-ui/icons/LiveHelp";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import Security from "@material-ui/icons/Security";
 // core components
 import GridContainer from "../Grid/GridContainer.js";
 import GridItem from "../Grid/GridItem.js";
@@ -22,11 +22,11 @@ class ProductSection extends React.Component {
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>Let's talk product</h2>
             <h5 className={classes.description}>
-              This is the paragraph where you can write more details about your
-              product. Keep you user engaged by providing meaningful
-              information. Remember that by this time, the user is curious,
-              otherwise he wouldn't scroll to get here. Add a button if you want
-              the user to see more.
+              This is the paragraph where we can write more details about the
+              product. Keep user engaged by providing meaningful information.
+              Remember that by this time, the user is curious, otherwise he
+              wouldn't scroll to get here. We can add a button if we want the
+              user to see more.
             </h5>
           </GridItem>
         </GridContainer>
@@ -34,9 +34,9 @@ class ProductSection extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Free Chat"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Chat}
+                title="Live Help"
+                description="Details about the features might go here. I dont know hwat feature need to be highlighted here"
+                icon={LiveHelp}
                 iconColor="info"
                 vertical
               />
@@ -44,7 +44,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Verified Users"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+                description="Verified doctors and blah bhlashda lsdhalsd hasld asldihyaidsfbajsf dgasilfilasfnlk h flashif alsfhalnsf alsfias lfhasflassf"
                 icon={VerifiedUser}
                 iconColor="success"
                 vertical
@@ -52,9 +52,9 @@ class ProductSection extends React.Component {
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Fingerprint"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Fingerprint}
+                title="Secure"
+                description="Ekdum secure platgorm sdafhjasl fhlaishf aslihfdals fdhlasid alsihbfaskjfhasjl flsahfalsfasfas"
+                icon={Security}
                 iconColor="danger"
                 vertical
               />

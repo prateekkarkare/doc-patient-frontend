@@ -7,19 +7,19 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import Header from "./Header/Header.js";
-import Parallax from "./Parallax.js";
-import Footer from "./Footer/Footer.js";
-import GridContainer from "./Grid/GridContainer.js";
-import GridItem from "./Grid/GridItem.js";
-import Button from "./CustomButtons/Button.js";
-import landingPageStyle from "../assets/jss/views/landingPageStyle.js";
-import HeaderLinks from "./Header/HeaderLinks.js";
+import Header from "components/Header/Header.js";
+import Parallax from "components/Parallax/Parallax.js";
+import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Button from "components/CustomButtons/Button.js";
+import landingPageStyle from "assets/jss/material-kit-react/views/landingPageStyle.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
 
 // Sections for this page
-import ProductSection from "./Sections/Products.js";
-import TeamSection from "./Sections/Team.js";
-import WorkSection from "./Sections/Contact.js";
+import ProductSection from "components/Sections/Products.js";
+import TeamSection from "components/Sections/Team.js";
+import WorkSection from "components/Sections/Contact.js";
 
 const dashboardRoutes = [];
 
@@ -40,7 +40,7 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter image={require("../assets/img/handshake.jpg")}>
+        <Parallax filter image={require("assets/img/handshake.jpg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>

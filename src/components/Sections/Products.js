@@ -7,11 +7,11 @@ import LiveHelp from "@material-ui/icons/LiveHelp";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
 import Security from "@material-ui/icons/Security";
 // core components
-import GridContainer from "../Grid/GridContainer.js";
-import GridItem from "../Grid/GridItem.js";
-import InfoArea from "../InfoArea/InfoArea.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import InfoArea from "components/InfoArea/InfoArea.js";
 
-import productStyle from "../../assets/jss/views/LandingPageSections/productStyle.js";
+import productStyle from "assets/jss/material-kit-react/views/LandingPageSections/productStyle.js";
 
 class ProductSection extends React.Component {
   render() {

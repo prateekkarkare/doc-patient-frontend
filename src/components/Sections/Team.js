@@ -7,17 +7,17 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import GridContainer from "../Grid/GridContainer.js";
-import GridItem from "../Grid/GridItem.js";
-import Button from "../CustomButtons/Button.js";
-import Card from "../Card/Card.js";
-import CardBody from "../Card/CardBody.js";
-import CardFooter from "../Card/CardFooter.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Button from "components/CustomButtons/Button.js";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import CardFooter from "components/Card/CardFooter.js";
 
-import teamStyle from "../../assets/jss/components/teamStyle.js";
+import teamStyle from "assets/jss/material-kit-react/views/LandingPageSections/teamStyle.js";
 
-import prateek from "../../assets/img/Faces/prateek.jpg";
-import rishi from "../../assets/img/Faces/rishi.jpg";
+import prateek from "assets/img/Faces/prateek.jpg";
+import rishi from "assets/img/Faces/rishi.jpg";
 
 class TeamSection extends React.Component {
   render() {

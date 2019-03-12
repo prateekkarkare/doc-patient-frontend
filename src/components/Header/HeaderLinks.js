@@ -13,10 +13,10 @@ import Tooltip from "@material-ui/core/Tooltip";
 import { People, Email } from "@material-ui/icons";
 
 // core components
-import CustomDropdown from "../CustomDropdown/CustomDropdown.js";
-import Button from "../CustomButtons/Button.js";
+import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
+import Button from "components/CustomButtons/Button.js";
 
-import headerLinksStyle from "../../assets/jss/components/Header/headerLinkStyle.js";
+import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinkStyle.js";
 
 function HeaderLinks({ ...props }) {
   const { classes } = props;

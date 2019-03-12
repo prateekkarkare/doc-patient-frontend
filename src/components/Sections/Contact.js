@@ -5,12 +5,12 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import GridContainer from "../Grid/GridContainer.js";
-import GridItem from "../Grid/GridItem.js";
-import CustomInput from "../CustomInput/CustomInput.js";
-import Button from "../CustomButtons/Button.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import CustomInput from "components/CustomInput/CustomInput.js";
+import Button from "components/CustomButtons/Button.js";
 
-import workStyle from "../../assets/jss/views/LandingPageSections/workStyle.js";
+import workStyle from "assets/jss/material-kit-react/views/LandingPageSections/workStyle.js";
 
 class WorkSection extends React.Component {
   render() {
@@ -57,14 +57,14 @@ class WorkSection extends React.Component {
                   }}
                   inputProps={{
                     multiline: true,
-                    rows: 5
+                    rows: 3
                   }}
                 />
                 <GridContainer justify="center">
                   <GridItem
                     xs={12}
                     sm={12}
-                    md={4}
+                    md={12}
                     className={classes.textCenter}
                   >
                     <Button color="primary">Send Message</Button>

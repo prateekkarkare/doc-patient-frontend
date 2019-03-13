@@ -21,7 +21,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bg7.jpg";
+import image from "assets/img/bg_scope.jpg";
 
 class LoginPage extends React.Component {
   constructor(props) {

@@ -17,7 +17,7 @@ import routes from "routes.js";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/layouts/dashboardStyle.js";
 
-import image from "assets/img/sidebar-2.jpg";
+import image from "assets/img/health.jpg";
 import logo from "assets/img/reactlogo.png";
 
 const switchRoutes = (
@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
     super(props);
     this.state = {
       image: image,
-      color: "blue",
+      color: "purple",
       hasImage: true,
       fixedClasses: "dropdown show",
       mobileOpen: false
@@ -94,7 +94,7 @@ class Dashboard extends React.Component {
       <div className={classes.wrapper}>
         <Sidebar
           routes={routes}
-          logoText={"Creative Tim"}
+          logoText={"Doc Connect"}
           logo={logo}
           image={this.state.image}
           handleDrawerToggle={this.handleDrawerToggle}

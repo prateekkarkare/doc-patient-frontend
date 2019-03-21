@@ -2,25 +2,18 @@
 // // // Tasks for TasksCard - see Dashboard view
 // #############################
 
-var bugs = [
-  'Sign contract for "What are conference organizers afraid of?"',
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  "Create 4 Invisible User Experiences you Never Knew About"
+var hospital = [
+  'Complete the "Contract A" with the hospital',
+  "Generic hospital task X",
+  "Generic hospital task Y",
+  "Generic hospital task Z"
 ];
-var website = [
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"'
-];
-var server = [
-  "Lines From Great Russian Literature? Or E-mails From My Boss?",
-  "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit",
-  'Sign contract for "What are conference organizers afraid of?"'
-];
+var clinic = ["Generic clinic task A", "Generic clinic task B"];
+var personal = ["Get gift for wife", "Buy a gun", "Clean dog poop"];
 
 module.exports = {
   // these 3 are used to create the tasks lists in TasksCard - Dashboard view
-  bugs,
-  website,
-  server
+  hospital,
+  clinic,
+  personal
 };

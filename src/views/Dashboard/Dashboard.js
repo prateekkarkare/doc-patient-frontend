@@ -14,9 +14,9 @@ import Update from "@material-ui/icons/Update";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
 import Accessibility from "@material-ui/icons/Accessibility";
-import BugReport from "@material-ui/icons/BugReport";
-import Code from "@material-ui/icons/Code";
-import Cloud from "@material-ui/icons/Cloud";
+import LocalHospital from "@material-ui/icons/LocalHospital";
+import CalendarToday from "@material-ui/icons/CalendarToday";
+import Person from "@material-ui/icons/Person";
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -30,7 +30,7 @@ import CardIcon from "components/DashboardCards/CardIcon.js";
 import CardBody from "components/DashboardCards/CardBody.js";
 import CardFooter from "components/DashboardCards/CardFooter.js";
 
-import { bugs, website, server } from "variables/general.js";
+import { hospital, clinic, personal } from "variables/general.js";
 
 import {
   dailySalesChart,
@@ -62,9 +62,9 @@ class Dashboard extends React.Component {
                 <CardIcon color="warning">
                   <Icon>content_copy</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Used Space</p>
+                <p className={classes.cardCategory}>Followups for today</p>
                 <h3 className={classes.cardTitle}>
-                  49/50 <small>GB</small>
+                  3/5 <small>Patients</small>
                 </h3>
               </CardHeader>
               <CardFooter stats>
@@ -73,7 +73,7 @@ class Dashboard extends React.Component {
                     <Warning />
                   </Danger>
                   <a href="#pablo" onClick={e => e.preventDefault()}>
-                    Get more space
+                    Schedule more followups
                   </a>
                 </div>
               </CardFooter>
@@ -86,7 +86,7 @@ class Dashboard extends React.Component {
                   <Store />
                 </CardIcon>
                 <p className={classes.cardCategory}>Revenue</p>
-                <h3 className={classes.cardTitle}>$34,245</h3>
+                <h3 className={classes.cardTitle}>8,245 INR</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
@@ -102,13 +102,15 @@ class Dashboard extends React.Component {
                 <CardIcon color="danger">
                   <Icon>info_outline</Icon>
                 </CardIcon>
-                <p className={classes.cardCategory}>Fixed Issues</p>
-                <h3 className={classes.cardTitle}>75</h3>
+                <p className={classes.cardCategory}>
+                  Active patient engagements
+                </p>
+                <h3 className={classes.cardTitle}>7</h3>
               </CardHeader>
               <CardFooter stats>
                 <div className={classes.stats}>
                   <LocalOffer />
-                  Tracked from Github
+                  Tracked from Server
                 </div>
               </CardFooter>
             </Card>
@@ -119,7 +121,7 @@ class Dashboard extends React.Component {
                 <CardIcon color="info">
                   <Accessibility />
                 </CardIcon>
-                <p className={classes.cardCategory}>Followers</p>
+                <p className={classes.cardCategory}>Total Patients</p>
                 <h3 className={classes.cardTitle}>+245</h3>
               </CardHeader>
               <CardFooter stats>
@@ -144,12 +146,12 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Daily Sales</h4>
+                <h4 className={classes.cardTitle}>Daily Revenue</h4>
                 <p className={classes.cardCategory}>
                   <span className={classes.successText}>
                     <ArrowUpward className={classes.upArrowCardCategory} /> 55%
                   </span>{" "}
-                  increase in today sales.
+                  increase in today revenue.
                 </p>
               </CardBody>
               <CardFooter chart>
@@ -172,14 +174,12 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-                <p className={classes.cardCategory}>
-                  Last Campaign Performance
-                </p>
+                <h4 className={classes.cardTitle}>Monthwise patient load</h4>
+                <p className={classes.cardCategory}>Year 2019</p>
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>
-                  <AccessTime /> campaign sent 2 days ago
+                  <AccessTime /> Updated a week ago
                 </div>
               </CardFooter>
             </Card>
@@ -196,14 +196,12 @@ class Dashboard extends React.Component {
                 />
               </CardHeader>
               <CardBody>
-                <h4 className={classes.cardTitle}>Completed Tasks</h4>
-                <p className={classes.cardCategory}>
-                  Last Campaign Performance
-                </p>
+                <h4 className={classes.cardTitle}>Daily patient traffic</h4>
+                <p className={classes.cardCategory}>Today's patient flow</p>
               </CardBody>
               <CardFooter chart>
                 <div className={classes.stats}>
-                  <AccessTime /> campaign sent 2 days ago
+                  <AccessTime /> Updated now
                 </div>
               </CardFooter>
             </Card>
@@ -216,35 +214,35 @@ class Dashboard extends React.Component {
               headerColor="primary"
               tabs={[
                 {
-                  tabName: "Bugs",
-                  tabIcon: BugReport,
+                  tabName: "Hospital",
+                  tabIcon: LocalHospital,
                   tabContent: (
                     <Tasks
                       checkedIndexes={[0, 3]}
                       tasksIndexes={[0, 1, 2, 3]}
-                      tasks={bugs}
+                      tasks={hospital}
                     />
                   )
                 },
                 {
-                  tabName: "Website",
-                  tabIcon: Code,
+                  tabName: "Clinic",
+                  tabIcon: CalendarToday,
                   tabContent: (
                     <Tasks
                       checkedIndexes={[0]}
                       tasksIndexes={[0, 1]}
-                      tasks={website}
+                      tasks={clinic}
                     />
                   )
                 },
                 {
-                  tabName: "Server",
-                  tabIcon: Cloud,
+                  tabName: "Personal",
+                  tabIcon: Person,
                   tabContent: (
                     <Tasks
                       checkedIndexes={[1]}
                       tasksIndexes={[0, 1, 2]}
-                      tasks={server}
+                      tasks={personal}
                     />
                   )
                 }
@@ -254,20 +252,25 @@ class Dashboard extends React.Component {
           <GridItem xs={12} sm={12} md={6}>
             <Card>
               <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+                <h4 className={classes.cardTitleWhite}>Patient Stats</h4>
                 <p className={classes.cardCategoryWhite}>
-                  New employees on 15th September, 2016
+                  Ongoing rehab patients currently
                 </p>
               </CardHeader>
               <CardBody>
                 <Table
                   tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
+                  tableHead={["ID", "Name", "Surgery", "City"]}
                   tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
+                    ["1", "MS Subbalaxmi", "Knee Replacement", "Dubai"],
+                    ["2", "Pogo Karmakar", "Paw Replacement", "Pune"],
+                    ["3", "VSRKP Rao", "Brain Replacement", "Haryana"],
+                    [
+                      "4",
+                      "Arvind Kejriwal",
+                      "Lung Replacement",
+                      "Jantar Mantar"
+                    ]
                   ]}
                 />
               </CardBody>

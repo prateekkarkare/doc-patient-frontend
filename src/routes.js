@@ -1,14 +1,15 @@
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Person from "@material-ui/icons/Person";
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
-import Notifications from "@material-ui/icons/Notifications";
+import {
+  Notifications,
+  Dashboard,
+  Healing,
+  LibraryBooks,
+  Person
+} from "@material-ui/icons";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
 //import UserProfile from "views/UserProfile/UserProfile.jsx";
-//import TableList from "views/TableList/TableList.jsx";
+import PatientList from "views/PatientList/PatientList.js";
 //import Typography from "views/Typography/Typography.jsx";
 //import Icons from "views/Icons/Icons.jsx";
 //import Maps from "views/Maps/Maps.jsx";
@@ -23,27 +24,27 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/user",
-    name: "User Profile",
-    icon: Person,
+    path: "/treatments",
+    name: "Treatments",
+    icon: Healing,
     //component: UserProfile,
     layout: "/admin"
   },
   {
-    path: "/table",
-    name: "Table List",
-    icon: "content_paste",
-    //component: TableList,
+    path: "/patients",
+    name: "Patient List",
+    icon: Person,
+    component: PatientList,
     layout: "/admin"
   },
   {
-    path: "/typography",
-    name: "Typography",
+    path: "/reading",
+    name: "Reading",
     icon: LibraryBooks,
     //component: Typography,
     layout: "/admin"
   },
-  {
+  /*{
     path: "/icons",
     name: "Icons",
     icon: BubbleChart,
@@ -56,10 +57,10 @@ const dashboardRoutes = [
     icon: LocationOn,
     // component: Maps,
     layout: "/admin"
-  },
+  },*/
   {
-    path: "/notifications",
-    name: "Notifications",
+    path: "/conversations",
+    name: "Conversations",
     icon: Notifications,
     //component: NotificationsPage,
     layout: "/admin"

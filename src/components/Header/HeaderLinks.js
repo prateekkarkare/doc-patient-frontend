@@ -10,19 +10,20 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { People, Email } from "@material-ui/icons";
+import { LocalHospital, Person, People, Email } from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinkStyle.js";
+import { Icon } from "@material-ui/core";
 
 function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {/*<ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText="I am a"
@@ -40,15 +41,27 @@ function HeaderLinks({ ...props }) {
             </Link>
           ]}
         />
+      </ListItem>*/}
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/admin/dashboard"
+          color="transparent"
+          target=""
+          className={classes.navLink}
+        >
+          {" "}
+          <LocalHospital className={classes.icon} /> Doctor
+        </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href=""
+          href="/profile-page"
           color="transparent"
-          target="_blank"
+          target=""
           className={classes.navLink}
         >
-          <Email className={classes.icons} /> Contact Us
+          {" "}
+          <Person className={classes.icon} /> Patient
         </Button>
       </ListItem>
     </List>
